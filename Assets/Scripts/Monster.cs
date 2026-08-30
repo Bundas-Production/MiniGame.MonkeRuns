@@ -22,6 +22,13 @@ public class Monster : MonoBehaviour
     [SerializeField]
     float despawnDistance = 10.0f;
     float respawnTime = 3.0f;
+    [Space]
+    [SerializeField]
+    AudioSource stepsIn;
+    [SerializeField]
+    AudioSource stepsOut;
+    [SerializeField]
+    AudioSource snowballHit;
 
     private void OnEnable()
     {
@@ -44,25 +51,28 @@ public class Monster : MonoBehaviour
 
             IncreaseSnowballAtack();
 
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(3.0f);
 
             if (Vector3.Distance(transform.position, player.position) > 5.0f)
             {
                 Despawn();
                 yield return new WaitForSeconds(respawnTime);
                 Spawn(new Vector3(player.position.x + Random.Range(-1.0f, 1.0f), transform.position.y, transform.position.z));
+                yield return new WaitForSeconds(2.0f);
             }
         }
     }
 
     void Spawn(Vector3 position)
     {
+        stepsIn.Play();
         this.transform.position = position;
         monsterCharacter.SetActive(true);
     }
 
     void Despawn()
     {
+        stepsOut.Play();
         monsterCharacter.SetActive(false);
     }
 
@@ -74,6 +84,7 @@ public class Monster : MonoBehaviour
             newSnowball.transform.position = new Vector3(player.position.x + Random.Range(-snowballSpawnRatio, snowballSpawnRatio), Random.Range(7.0f, 15.0f), 0);
             float scale = Random.Range(0.5f, 2.0f);
             newSnowball.transform.localScale = new Vector3(scale, scale, scale);
+            newSnowball.GetComponent<Snowball>().hitAudio = snowballHit;
         }
     }
 
