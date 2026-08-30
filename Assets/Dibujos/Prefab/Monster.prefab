@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster
   monsterCharacter: {fileID: 5218847182368715210}
-  animator: {fileID: 0}
+  animator: {fileID: 4566601346531662059}
   player: {fileID: 0}
   snowball: {fileID: 5289276870179851057, guid: b5d367921ed44a74783837186bdc489a, type: 3}
   snowballsPerAttack: 5

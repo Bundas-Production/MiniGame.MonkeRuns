@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour
     GameObject monsterCharacter;
     [SerializeField]
     Animator animator;
+    int hideParam;
     [Space]
     [SerializeField]
     Transform player;
@@ -29,6 +30,11 @@ public class Monster : MonoBehaviour
     AudioSource stepsOut;
     [SerializeField]
     AudioSource snowballHit;
+
+    private void Start()
+    {
+        hideParam = Animator.StringToHash("Hide");
+    }
 
     private void OnEnable()
     {
@@ -66,14 +72,16 @@ public class Monster : MonoBehaviour
     void Spawn(Vector3 position)
     {
         stepsIn.Play();
+        animator.SetBool(hideParam, false);
         this.transform.position = position;
-        monsterCharacter.SetActive(true);
+        //monsterCharacter.SetActive(true);
     }
 
     void Despawn()
     {
         stepsOut.Play();
-        monsterCharacter.SetActive(false);
+        animator.SetBool(hideParam, true);
+        //monsterCharacter.SetActive(false);
     }
 
     public void SpawnSnowballs()
