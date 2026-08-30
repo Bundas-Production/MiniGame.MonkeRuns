@@ -161,9 +161,9 @@ TextureImporter:
       name: comic_1
       rect:
         serializedVersion: 2
-        x: 999
+        x: 1013
         y: 0
-        width: 969
+        width: 955
         height: 918
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
