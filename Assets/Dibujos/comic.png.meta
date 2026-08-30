@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 141a53970c2bbf64a91dbfb6887b8041
+guid: 7810e503cea071c4a9f64dd560f6add5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -84,12 +84,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 10
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grficos2_0
+      name: comic_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 81
-        width: 790
-        height: 1063
+        x: 0
+        y: 0
+        width: 939
+        height: 918
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,30 +151,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df18385fc0734234688d0d966e3c0412
-      internalID: -595532787
+      spriteID: 412a95d576c5e4b4893e5d390fb953db
+      internalID: 1996197603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grficos2_1
+      name: comic_1
       rect:
         serializedVersion: 2
-        x: 970
-        y: 67
-        width: 603
-        height: 680
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 999
+        y: 0
+        width: 969
+        height: 918
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a4e26ede92905449965a75ef58ccda3
-      internalID: -384504697
+      spriteID: 2d5e2037e18c1a84cb857c4ec561cc55
+      internalID: 952863460
       vertices: []
       indices: 
       edges: []
@@ -183,7 +183,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b076477d55d2ef247a9a97bcbfe7106c
+    spriteID: 7b38c537b19ab8246b56a6655b820b51
     internalID: 0
     vertices: []
     indices: 
@@ -195,8 +195,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      grficos2_0: -595532787
-      grficos2_1: -384504697
+      comic_0: 1996197603
+      comic_1: 952863460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
