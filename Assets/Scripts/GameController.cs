@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     GameObject replayButton;
 
+    [Space]
     [SerializeField]
     GameObject comic;
     [SerializeField]
@@ -30,6 +31,15 @@ public class GameController : MonoBehaviour
     [SerializeField]
     Image comicTwo;
     Coroutine comicRoutine;
+
+    [Space]
+
+    [SerializeField]
+    Image condition;
+    [SerializeField]
+    Image winCondition;
+    [SerializeField]
+    Image looseCondition;
 
     private void Awake()
     {
@@ -61,13 +71,14 @@ public class GameController : MonoBehaviour
         monster.enabled = true;
     }
 
-    public void FinishGame()
+    public void FinishGame(bool isWin)
     {
         Instance.playerController.enabled = false;
         Instance.monster.enabled = false;
         Instance.playButton.SetActive(false);
         Instance.replayButton.SetActive(true);
         Instance.canvas.SetActive(true);
+        StartCoroutine(FinishImage(isWin));
     }
 
     public void ReloadGame()
@@ -116,5 +127,20 @@ public class GameController : MonoBehaviour
             yield return null;
         }
         comic.SetActive(false);
+    }
+
+    IEnumerator FinishImage(bool isWin)
+    {
+        winCondition.gameObject.SetActive(isWin);
+        looseCondition.gameObject.SetActive(!isWin);
+
+
+        while (condition.color.a < 1)
+        {
+            condition.color += new Color(0, 0, 0, Time.deltaTime);
+            winCondition.color += new Color(0, 0, 0, Time.deltaTime);
+            looseCondition.color += new Color(0, 0, 0, Time.deltaTime);
+            yield return null;
+        }
     }
 }

@@ -7,7 +7,7 @@ public class Toilet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameController.Instance.FinishGame();
+            GameController.Instance.FinishGame(true);
         }
     }
 }

@@ -16,7 +16,7 @@ public class Snowball : MonoBehaviour
         else if (collision.gameObject.tag == "Player")
         {
             hitAudio.Play();
-            GameController.Instance.FinishGame();
+            GameController.Instance.FinishGame(false);
         }
     }
 }
